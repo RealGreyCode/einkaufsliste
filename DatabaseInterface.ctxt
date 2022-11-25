@@ -1,0 +1,9 @@
+#BlueJ class context
+comment0.target=DatabaseInterface
+comment1.params=
+comment1.target=DatabaseInterface()
+comment2.params=
+comment2.target=DatabaseConnector\ getConnector()
+comment3.params=sql
+comment3.target=QueryResult\ executeQuery(java.lang.String)
+numComments=4
