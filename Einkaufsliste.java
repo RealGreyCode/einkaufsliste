@@ -12,25 +12,25 @@ public class Einkaufsliste
     }
     
     public String gibTitel() {
-        QueryResult result = DatabaseInterface.executeQuery("SELECT titel FROM `einkaufsliste` WHERE `id` = " + this.id + ";");
-		if(result.getRowCount() > 0) 
-			return result.getData()[0][0]; 
-		return null;
+        QueryResult result = DatabaseInterface.executeQuery("SELECT `titel` FROM `einkaufslisten` WHERE `id` = " + this.id + ";");
+        if(result.getRowCount() > 0) 
+            return result.getData()[0][0]; 
+        return null;
     }
     
     public Map<Produkt, Integer> gibProdukte() {
-		QueryResult result = DatabaseInterface.executeQuery("SELECT `produkt_id`, `menge` FROM `listeneintraege` WHERE `listen_id` = " + this.id + ";");
-		Map<Produkt, Integer> produkte = new HashMap<>();
+        QueryResult result = DatabaseInterface.executeQuery("SELECT `produkt_id`, `menge` FROM `listeneintraege` WHERE `listen_id` = " + this.id + ";");
+        Map<Produkt, Integer> produkte = new HashMap<>();
 
-		for(String[] row : result.getData()) {
-			int produktID = Integer.parseInt(row[0]);
-			int menge = Integer.parseInt(row[1]);
+        for(String[] row : result.getData()) {
+            int produktID = Integer.parseInt(row[0]);
+            int menge = Integer.parseInt(row[1]);
 
-			Produkt produkt = new Produkt(produktID);
+            Produkt produkt = new Produkt(produktID);
 
-			produkte.put(produkt, menge);
-		}
-		return produkte;
+            produkte.put(produkt, menge);
+        }
+        return produkte;
     }
     
 }

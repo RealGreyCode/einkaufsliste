@@ -14,18 +14,18 @@ public class Produkt
         this.id = id;
     }
 
-	public String gibBezeichnung() {
-		QueryResult result = DatabaseInterface.executeQuery("SELECT `bezeichnung` FROM `produkte` WHERE `produkt_id` = " + this.id);
-		if(result.getRowCount() > 0)
-			return result.getData()[0][0];
-		return null;
-	}
+    public String gibBezeichnung() {
+        QueryResult result = DatabaseInterface.executeQuery("SELECT `bezeichnung` FROM `produkte` WHERE `id` = " + this.id);
+        if(result.getRowCount() > 0)
+            return result.getData()[0][0];
+        return null;
+    }
     
-	public Kategorie gibKategorie() {
-		QueryResult result = DatabaseInterface.executeQuery("SELECT `kategorie_id` FROM `produkte` WHERE `produkt_id` = " + this.id);
-		if (result.getRowCount() > 0)
-			return new Kategorie(Integer.parseInt(result.getData()[0][0]));
-		return null;
-	}
+    public Kategorie gibKategorie() {
+        QueryResult result = DatabaseInterface.executeQuery("SELECT `kategorie_id` FROM `produkte` WHERE `id` = " + this.id);
+        if (result.getRowCount() > 0)
+            return new Kategorie(Integer.parseInt(result.getData()[0][0]));
+        return null;
+    }
 
 }

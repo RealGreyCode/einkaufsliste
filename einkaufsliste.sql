@@ -5,10 +5,10 @@ CREATE TABLE `kategorien` (
 );
 
 CREATE TABLE `produkte` (
-	`produkt_id` INT(10) UNSIGNED NOT NULL AUTO_INCREMENT,
+	`id` INT(10) UNSIGNED NOT NULL AUTO_INCREMENT,
 	`bezeichnung` VARCHAR(200) NOT NULL UNIQUE,
 	`kategorie_id` INT(10) UNSIGNED NOT NULL,
-	PRIMARY KEY (`produkt_id`),
+	PRIMARY KEY (`id`),
 	FOREIGN KEY (`kategorie_id`) REFERENCES `kategorien`(`id`) ON DELETE CASCADE
 );
 

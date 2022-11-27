@@ -2,4 +2,8 @@
 comment0.target=Einkaufsliste
 comment1.params=id
 comment1.target=Einkaufsliste(int)
-numComments=2
+comment2.params=
+comment2.target=java.lang.String\ gibTitel()
+comment3.params=
+comment3.target=java.util.Map\ gibProdukte()
+numComments=4

@@ -1,0 +1,10 @@
+#BlueJ class context
+comment0.target=Produkt
+comment0.text=\r\n\ Beschreiben\ Sie\ hier\ die\ Klasse\ Produkt.\r\n\ \r\n\ @author\ (Ihr\ Name)\ \r\n\ @version\ (eine\ Versionsnummer\ oder\ ein\ Datum)\r\n
+comment1.params=id
+comment1.target=Produkt(int)
+comment2.params=
+comment2.target=java.lang.String\ gibBezeichnung()
+comment3.params=
+comment3.target=Kategorie\ gibKategorie()
+numComments=4
